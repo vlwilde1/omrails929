@@ -1,3 +1,7 @@
+<% if user_signed_in? %>
+ 	<h1> You're logged in </h1>
+ <% else %>
+
 <div class="hero-unit">
 
 <h1>Welcome to the Best Webpage!</h1>
@@ -6,6 +10,7 @@
 	<%= link_to "Wilde in the Kitchen", "http://www.wildeinthekitchen.blogspot.com" %>
 	 </p>
 <p> 
-	<%= link_to "Sign Up Now!", "#", class: "btn-primary btn-large" %>
+	<%= link_to "Sign up now!", new_user_registration_path, class: "btn-primary btn-large" %>
 </p>
 </div>
+ <% end %>
